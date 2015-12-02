@@ -21,5 +21,8 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 
 - (void) moveMediaItem:(MediaPlay *)item;
 
+- (void) requestNewItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
+- (void) requestOldItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
+
 
 @end

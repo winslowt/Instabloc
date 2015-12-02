@@ -25,9 +25,35 @@
     
     [[DataStores sharedInstance] addObserver:self forKeyPath:@"mediaItems" options:0 context:nil];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
+    
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
     
     
+}
+
+- (void) infiniteScrollIfNecessary {
+    // #3
+    NSIndexPath *bottomIndexPath = [[self.tableView indexPathsForVisibleRows] lastObject];
+    
+    if (bottomIndexPath && bottomIndexPath.row == [DataStores sharedInstance].mediaItems.count - 1) {
+        // The very last cell is on screen
+        [[DataStores sharedInstance] requestOldItemsWithCompletionHandler:nil];
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+// #4
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self infiniteScrollIfNecessary];
+}
+
+- (void) refreshControlDidFire:(UIRefreshControl *) sender {
+    [[DataStores sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+        [sender endRefreshing];
+    }];
 }
 
 - (void) dealloc
@@ -156,7 +182,7 @@
         MediaPlay *item = [self items][indexPath.row];
         
         [[DataStores sharedInstance] moveMediaItem:item];
-        [self.tableView reloadData];
+        
         
     }
 }
