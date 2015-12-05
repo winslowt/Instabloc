@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DataStores.h"
 
 @interface LoginViewController : UIViewController
 
-@property (nonatomic, weak) UIWebView *webView;
 
 
 extern NSString *const LoginViewControllerDidGetAccessTokenNotification;

@@ -7,8 +7,12 @@
 //
 
 #import "LoginViewController.h"
+#import "DataStores.h"
+
 
 @interface LoginViewController () <UIWebViewDelegate>
+
+@property (nonatomic, weak) UIWebView *webView;
 
 @property (nonatomic, strong) UIBarButtonItem *backButton;
 
