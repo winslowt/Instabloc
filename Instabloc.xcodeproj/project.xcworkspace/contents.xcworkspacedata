@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../LoginViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:../LoginViewController.m">
+   </FileRef>
+   <FileRef
       location = "self:Instabloc.xcodeproj">
    </FileRef>
 </Workspace>

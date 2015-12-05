@@ -16,7 +16,10 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 @interface DataStores : NSObject
 
 +(instancetype) sharedInstance;
+
+
 @property (nonatomic, strong, readonly) NSArray *mediaItems;
+@property (nonatomic, strong, readonly) NSString *accessToken;
 
 
 - (void) moveMediaItem:(MediaPlay *)item;
@@ -24,5 +27,6 @@ typedef void (^NewItemCompletionBlock)(NSError *error);
 - (void) requestNewItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
 - (void) requestOldItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler;
 
++ (NSString *) instagramClientID; 
 
 @end
