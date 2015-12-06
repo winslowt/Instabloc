@@ -64,7 +64,7 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
 - (void)backButtonPressed
 {
     // write your code to prepare popview
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [_webView goBack];
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
