@@ -26,6 +26,12 @@ static UIColor *orangeColor;
 static NSParagraphStyle *paragraphStyle;
 
 @implementation MediaTableViewCell
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:NO animated:animated];
+}
+
+
 + (CGFloat) heightForMediaItem:(MediaPlay *)mediaItem width:(CGFloat)width {
     // Make a cell
     MediaTableViewCell *layoutCell = [[MediaTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"layoutCell"];
@@ -233,7 +239,7 @@ static NSParagraphStyle *paragraphStyle;
     
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+     [super setSelected:NO animated:animated];
     // Configure the view for the selected state
 }
 @end
