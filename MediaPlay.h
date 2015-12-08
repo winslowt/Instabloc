@@ -10,7 +10,7 @@
 
 @class User;
 
-@interface MediaPlay : NSObject
+@interface MediaPlay : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *idNumber;
 @property (nonatomic, strong) User *user;

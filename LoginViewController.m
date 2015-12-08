@@ -27,7 +27,7 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
 
 
 - (NSString *)redirectURI {
-    return @"ig62733546cdfd4eee9958ff9aa9af3a3e://authorize";
+    return @"http://bloc.io";
 }
 
 
@@ -42,9 +42,6 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     
     self.webView = webView;
     
-    [self addBackButtonWithTitle:@"back"];
-    
-    
     self.title = NSLocalizedString(@"Login", @"Login");
     
     NSString *urlString = [NSString stringWithFormat:@"https://instagram.com/oauth/authorize/?client_id=%@&redirect_uri=%@&response_type=token", [DataStores instagramClientID], [self redirectURI]];
@@ -53,6 +50,8 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     if (url) {
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
+        
+    [self addBackButtonWithTitle:@"back"];
     }
 }
 
@@ -79,9 +78,10 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     // Removing this line can cause a flickering effect when you relaunch the app after logging in, as the web view is briefly displayed, automatically authenticates with cookies, returns the access token, and dismisses the login view, sometimes in less than a second.
     [self clearInstagramCookies];
     
-    // see https://developer.apple.com/library/ios/documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/doc/uid/TP40006951-CH3-DontLinkElementID_1
+//     see https://developer.apple.com/library/ios/documentation/uikit/reference/UIWebViewDelegate_Protocol/Reference///Reference.html#//apple_ref/doc/uid/TP40006951-CH3-DontLinkElementID_1
+    
     self.webView.delegate = nil;
-}
+}	
 
 /**
  Clears Instagram cookies. This prevents caching the credentials in the cookie jar.
@@ -110,15 +110,10 @@ NSString *const LoginViewControllerDidGetAccessTokenNotification = @"LoginViewCo
     return YES;
 }
 - (void) viewWillLayoutSubviews {
-    
-//    CGFloat buttonWidth = CGRectGetWidth(self.view.bounds) / 4;
+
     self.webView.frame = self.view.bounds;
     
-//    CGFloat currentButtonX = 0;
-    
-//    for (UIButton *thisButton in self.backButton) {
-//        thisButton.frame = CGRectMake(currentButtonX, CGRectGetMaxY(self.webView.frame), buttonWidth, itemHeight);
-//        currentButtonX += buttonWidth;
+
     }
 
 
