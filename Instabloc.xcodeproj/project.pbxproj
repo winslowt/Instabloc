@@ -30,6 +30,7 @@
 		DA9147321C0BA77F00EF7DAF /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147311C0BA77F00EF7DAF /* Comments.m */; };
 		DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147341C0BA7EA00EF7DAF /* DataStores.m */; };
 		DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */; };
+		DAB406C61C1E260D00ACC5D2 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		DA9147341C0BA7EA00EF7DAF /* DataStores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStores.m; sourceTree = "<group>"; };
 		DA9147361C0BAA5500EF7DAF /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
+		DAB406C41C1E260D00ACC5D2 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
+		DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */,
 				DA4A463E1C111B08002A39CD /* LoginViewController.h */,
 				DA4A463F1C111B08002A39CD /* LoginViewController.m */,
+				DAB406C41C1E260D00ACC5D2 /* MediaFullScreenViewController.h */,
+				DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */,
 				DA9147121C0BA48A00EF7DAF /* Images */,
 				DA9146EB1C0BA39600EF7DAF /* Instabloc */,
 				DA9147051C0BA39600EF7DAF /* InstablocTests */,
@@ -368,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB406C61C1E260D00ACC5D2 /* MediaFullScreenViewController.m in Sources */,
 				DA9147291C0BA51100EF7DAF /* ImagesTableViewController.m in Sources */,
 				DA9147321C0BA77F00EF7DAF /* Comments.m in Sources */,
 				DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */,

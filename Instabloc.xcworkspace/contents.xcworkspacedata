@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MediaFullScreenViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:MediaFullScreenViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:Instabloc.xcodeproj">
    </FileRef>
    <FileRef
