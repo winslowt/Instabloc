@@ -30,7 +30,7 @@
 @implementation DataStores
 
 + (NSString *) instagramClientID {
-    return @"62733546cdfd4eee9958ff9aa9af3a3e";
+    return @"d1e9ab5738c046089d9070c7e5790cb4";
 }
 
 - (NSString *) pathForFilename:(NSString *) filename {
@@ -290,7 +290,7 @@
 - (instancetype) init {
     self = [super init];
     
-    if (self) {
+    if (self) {	
         self.accessToken = [UICKeyChainStore stringForKey:@"access token"];
         
         if (!self.accessToken) {
