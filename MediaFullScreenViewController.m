@@ -17,6 +17,9 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
+@property (nonatomic, strong) UIButton *shareButton;
+@property (nonatomic, strong) UINavigationBar *shareBar;
+
 @end
 
 @implementation MediaFullScreenViewController
@@ -35,6 +38,35 @@
     
     [self.scrollView addSubview:self.imageView];
     
+    [self.view addSubview:_shareButton];
+    
+
+//    self.shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [_shareButton addTarget:self action:@selector(:) forControlEvents:UIControlEventTouchUpInside];
+//    [_shareButton setTitle:@"Share" forState:UIControlStateNormal];
+//    _shareButton.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+//    [self.view addSubview:_shareButton];
+    
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc]
+                                   initWithTitle:@"Flip"
+                                   style:UIBarButtonItemStyleBordered
+                                   target:self
+                                   action:@selector(shareAction:)];
+    self.navigationItem.rightBarButtonItem = shareButton;
+    
+    self.shareBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    
+    
+    [self.view addSubview:self.shareBar];
+
+     _shareButton = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"Flip"
+                                    style:UIBarButtonItemStyleBordered
+                                    target:self
+                                    action:@selector(shareAction:)];
+    self.navigationItem.rightBarButtonItem = shareButton;
+    
+    
     // #3
     self.scrollView.contentSize = self.media.image.size;
     
@@ -48,6 +80,32 @@
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
 }
+
+-(void)shareAction:(id)sender {
+    
+    NSLog(@"Action gets called.");
+    
+}
+
+#pragma mark - Button for sharing
+
+//- (void)addShareButtonWithTitle:(NSString *)title {
+//    
+//    UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [shareButton setTitle:NSLocalizedString(@"Share", @"share button") forState:UIControlStateNormal];
+//    [shareButton addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+//    shareButton.backgroundColor = [UIColor whiteColor];
+//    [shareButton sizeToFit];
+//    [shareButton setFrame:CGRectMake(self.imageView.image.size.width - shareButton.frame.size.width - 10, shareButton.frame.size.height, shareButton.frame.size.width, shareButton.frame.size.height)];
+//    [self.imageView addSubview:self.shareButton];
+//}
+
+//- (void)shareAction {
+//    
+//    [_media  ];
+//}
+
+
 
 #pragma mark - Gesture Recognizers
 
