@@ -10,6 +10,8 @@
 #import "MediaPlay.h"
 #import "Comments.h"
 #import "User.h"
+#import "DataStores.h"
+
 
 @interface MediaTableViewCell () <UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UIImageView *mediaImageView;
@@ -17,6 +19,7 @@
 @property (nonatomic, strong) UILabel *commentLabel;
 @property (nonatomic, strong) UILabel *firstComment;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *reDownloading;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
 @property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHeightConstraint;
 
@@ -77,6 +80,12 @@ static NSParagraphStyle *paragraphStyle;
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
+        
+        self.reDownloading = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(secondTapFired:)];
+        self.reDownloading.numberOfTouchesRequired = 2;
+        
+        self.reDownloading.delegate = self;
+        [self.mediaImageView addGestureRecognizer:self.reDownloading];
         
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
         self.longPressGestureRecognizer.delegate = self;
@@ -149,6 +158,12 @@ static NSParagraphStyle *paragraphStyle;
     
     [self.contentView addConstraints:@[self.imageHeightConstraint, self.usernameAndCaptionLabelHeightConstraint, self.commentLabelHeightConstraint]];
     return self;
+}
+
+- (void)secondTapFired:(UITapGestureRecognizer *)sender {
+    
+    [[DataStores sharedInstance]downloadImageForMediaItem:self.mediaItem];
+    
 }
 
 + (void)load {

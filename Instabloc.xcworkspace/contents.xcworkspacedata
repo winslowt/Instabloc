@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ShareUtilities.h">
+   </FileRef>
+   <FileRef
+      location = "group:ShareUtilities.m">
+   </FileRef>
+   <FileRef
       location = "group:MediaFullScreenViewController.h">
    </FileRef>
    <FileRef

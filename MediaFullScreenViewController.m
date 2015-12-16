@@ -8,6 +8,7 @@
 
 #import "MediaFullScreenViewController.h"
 #import "MediaPlay.h"
+#import "ShareUtilities.h"
 
 
 @interface MediaFullScreenViewController () <UIScrollViewDelegate>
@@ -18,7 +19,7 @@
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
 @property (nonatomic, strong) UIButton *shareButton;
-@property (nonatomic, strong) UINavigationBar *shareBar;
+//@property (nonatomic, strong) UINavigationBar *shareBar;
 
 @end
 
@@ -38,33 +39,24 @@
     
     [self.scrollView addSubview:self.imageView];
     
+    self.shareButton = [UIButton new];
+    
+    [self.shareButton setTitle:@"Share" forState:UIControlStateNormal];
+    
+    [self.shareButton addTarget:self action:@selector(shareAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.shareButton.translatesAutoresizingMaskIntoConstraints = NO;
+    
     [self.view addSubview:_shareButton];
     
-
-//    self.shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [_shareButton addTarget:self action:@selector(:) forControlEvents:UIControlEventTouchUpInside];
-//    [_shareButton setTitle:@"Share" forState:UIControlStateNormal];
-//    _shareButton.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-//    [self.view addSubview:_shareButton];
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-55-[shareButton(75)]" options:kNilOptions metrics:nil views:@{@"shareButton": self.shareButton}];
     
-    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:@"Flip"
-                                   style:UIBarButtonItemStyleBordered
-                                   target:self
-                                   action:@selector(shareAction:)];
-    self.navigationItem.rightBarButtonItem = shareButton;
-    
-    self.shareBar = [[UINavigationBar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[shareButton(150)]-25-|" options:kNilOptions metrics:nil views:@{@"shareButton": self.shareButton}];
     
     
-    [self.view addSubview:self.shareBar];
-
-     _shareButton = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"Flip"
-                                    style:UIBarButtonItemStyleBordered
-                                    target:self
-                                    action:@selector(shareAction:)];
-    self.navigationItem.rightBarButtonItem = shareButton;
+    
+    [self.view addConstraints:verticalConstraints];
+    [self.view addConstraints:horizontalConstraints];
     
     
     // #3
@@ -85,27 +77,11 @@
     
     NSLog(@"Action gets called.");
     
+    
+    [ShareUtilities shareMediaItem:self.media fromVC:self];
+    
+ 
 }
-
-#pragma mark - Button for sharing
-
-//- (void)addShareButtonWithTitle:(NSString *)title {
-//    
-//    UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//    [shareButton setTitle:NSLocalizedString(@"Share", @"share button") forState:UIControlStateNormal];
-//    [shareButton addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
-//    shareButton.backgroundColor = [UIColor whiteColor];
-//    [shareButton sizeToFit];
-//    [shareButton setFrame:CGRectMake(self.imageView.image.size.width - shareButton.frame.size.width - 10, shareButton.frame.size.height, shareButton.frame.size.width, shareButton.frame.size.height)];
-//    [self.imageView addSubview:self.shareButton];
-//}
-
-//- (void)shareAction {
-//    
-//    [_media  ];
-//}
-
-
 
 #pragma mark - Gesture Recognizers
 

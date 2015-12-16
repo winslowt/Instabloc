@@ -13,6 +13,7 @@
 #import "Comments.h"
 #import "MediaTableViewCell.h"
 #import "MediaFullScreenViewController.h"
+#import "ShareUtilities.h"
 
 
 @interface ImagesTableViewController () <MediaTableViewCellDelegate>
@@ -30,24 +31,14 @@
     [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
     
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
-    ////checkmate
+    
+    [[DataStores sharedInstance] requestNewItemsWithCompletionHandler:nil];
+    
     
 }
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
-    NSMutableArray *itemsToShare = [NSMutableArray array];
-    
-    if (cell.mediaItem.caption.length > 0) {
-        [itemsToShare addObject:cell.mediaItem.caption];
-    }
-    
-    if (cell.mediaItem.image) {
-        [itemsToShare addObject:cell.mediaItem.image];
-    }
-    
-    if (itemsToShare.count > 0) {
-        UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
-        [self presentViewController:activityVC animated:YES completion:nil];
-    }
+  
+    [ShareUtilities shareMediaItem:cell.mediaItem fromVC:self];
     
 }
 
@@ -118,12 +109,6 @@
                 [indexPathsThatChanged addObject:newIndexPath];
             }];
             
-            [UIView beginAnimations:nil context:NULL];
-            [UIView setAnimationDuration:3.0];
-            [self.tableView setFrame:CGRectMake(0, 0, 50, 50)];
-            [UIView commitAnimations];
-            
-            // #2 - Call `beginUpdates` to tell the table view we're about to make changes
             [self.tableView beginUpdates];
             
             // Tell the table view what the changes are
@@ -169,6 +154,7 @@
 #pragma mark - MediaTableViewCellDelegate
 
 - (void) cell:(MediaTableViewCell *)cell didTapImageView:(UIImageView *)imageView {
+    
     MediaFullScreenViewController *fullScreenVC = [[MediaFullScreenViewController alloc] initWithMedia:cell.mediaItem];
     
     [self presentViewController:fullScreenVC animated:YES completion:nil];
