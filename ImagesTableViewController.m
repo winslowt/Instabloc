@@ -10,6 +10,7 @@
 #import "DataStores.h"
 #import "MediaPlay.h"
 #import "User.h"
+#import "LikeButton.h"
 #import "Comments.h"
 #import "MediaTableViewCell.h"
 #import "MediaFullScreenViewController.h"
@@ -17,6 +18,8 @@
 
 
 @interface ImagesTableViewController () <MediaTableViewCellDelegate>
+
+
 
 @end
 
@@ -40,11 +43,11 @@
 - (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     MediaPlay *mediaItem = [DataStores sharedInstance].mediaItems[indexPath.row];
     //of the data store, which is only 1
-    if (mediaItem.downloadState == MediaDownloadStateNeedsImage && self.isDecelerating && self.isScrolling) { //TODO: Add an extra check here to make sure we're not accelerating or dragging
+    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) { //TODO: Add an extra check here to make sure we're not accelerating or dragging
         [[DataStores sharedInstance] downloadImageForMediaItem:mediaItem];
     }
 }
-
+// && self.isDecelerating && self.isScrolling
 
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
   
@@ -79,45 +82,45 @@
     [self infiniteScrollIfNecessary];
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
-    self.isScrolling = YES;
-    NSLog(@"scrollViewWillBeginDragging");
-    
-}
-    
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerating {
-        //[super scrollViewDidEndDragging:scrollView willDecelerate:decelerate];    // pull to refresh
-        
-        if(!decelerating) {
-            self.isScrolling = NO;
-        }
-        NSLog(@"%@scrollViewDidEndDragging", self.isScrolling ? @"" : @"-");
-        
-        
-        self.decelerationRate = UIScrollViewDecelerationRateNormal;
-    
-
-    
-    //TODO: Use UIScrollViewDelegate methods to save variables that help you check decelerating state and dragging
-    
-    //TODO: If you set isDecelerating = YES, make sure to also set when you're not decelerating (isDecelerating = NO)
-}
-
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
-    
-    self.isScrolling = YES;
-    NSLog(@"Scroll view is decelerating");
-    
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-    self.isScrolling = NO;
-    
-    NSLog(@"Scroll view is NOT decelerating");
-    
-}
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+//    
+//    self.isScrolling = YES;
+//    NSLog(@"scrollViewWillBeginDragging");
+//    
+//}
+//    
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerating {
+//        //[super scrollViewDidEndDragging:scrollView willDecelerate:decelerate];    // pull to refresh
+//        
+//        if(!decelerating) {
+//            self.isScrolling = NO;
+//        }
+//        NSLog(@"%@scrollViewDidEndDragging", self.isScrolling ? @"" : @"-");
+//        
+//        
+//        self.decelerationRate = UIScrollViewDecelerationRateNormal;
+//    
+//
+//    
+//    //TODO: Use UIScrollViewDelegate methods to save variables that help you check decelerating state and dragging
+//    
+//    //TODO: If you set isDecelerating = YES, make sure to also set when you're not decelerating (isDecelerating = NO)
+//}
+//
+//- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+//    
+//    self.isScrolling = YES;
+//    NSLog(@"Scroll view is decelerating");
+//    
+//}
+//
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    
+//    self.isScrolling = NO;
+//    
+//    NSLog(@"Scroll view is NOT decelerating");
+//    
+//}
 
 
 - (void) refreshControlDidFire:(UIRefreshControl *) sender {
@@ -212,6 +215,17 @@
     [self presentViewController:fullScreenVC animated:YES completion:nil];
 }
 
+- (void) cellDidPressLikeButton:(MediaTableViewCell *)cell {
+    MediaPlay *item = cell.mediaItem;
+    
+    [[DataStores sharedInstance] toggleLikeOnMediaItem:item withCompletionHandler:^{
+        if (cell.mediaItem == item) {
+            cell.mediaItem = item;
+        }
+    }];
+    
+    cell.mediaItem = item;
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -260,48 +274,6 @@
     }
 }
 
-//
-//- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath
-//       toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath {
-//    
-//    NSDictionary *section = [self.images objectAtIndex:sourceIndexPath.section];
-//    
-//    NSUInteger sectionCount = [[section valueForKey:@"content"] count];
-//    
-//    if (sourceIndexPath.section != proposedDestinationIndexPath.section) {
-//        NSUInteger rowInSourceSection =
-//        (sourceIndexPath.section > proposedDestinationIndexPath.section) ?
-//        0 : sectionCount - 1;
-//        
-//        return [NSIndexPath indexPathForRow:rowInSourceSection inSection:sourceIndexPath.section];
-//    } else if (proposedDestinationIndexPath.row >= sectionCount) {
-//        return [NSIndexPath indexPathForRow:sectionCount - 1 inSection:sourceIndexPath.section];
-//    }
-//    // Allow the proposed destination.
-//    return proposedDestinationIndexPath;
 
-//    
-//    proposedDestinationIndexPath = 0;
-//    
-//    if (sourceIndexPath == proposedDestinationIndexPath) {
-//        
-//        
-//    }
-
-//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-//    // Return NO if you do not want the item to be re-orderable.
-//    return YES;
-//}
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

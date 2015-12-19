@@ -32,6 +32,17 @@
 		DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147341C0BA7EA00EF7DAF /* DataStores.m */; };
 		DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */; };
 		DAB406C61C1E260D00ACC5D2 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */; };
+		DAC0059C1C25B05C0004EBF2 /* angle-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005931C25B05C0004EBF2 /* angle-mask.png */; };
+		DAC0059D1C25B05C0004EBF2 /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005941C25B05C0004EBF2 /* angle-mask@2x.png */; };
+		DAC0059E1C25B05C0004EBF2 /* angle-mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005951C25B05C0004EBF2 /* angle-mask@3x.png */; };
+		DAC0059F1C25B05C0004EBF2 /* heart-empty.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005961C25B05C0004EBF2 /* heart-empty.png */; };
+		DAC005A01C25B05C0004EBF2 /* heart-empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005971C25B05C0004EBF2 /* heart-empty@2x.png */; };
+		DAC005A11C25B05C0004EBF2 /* heart-empty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005981C25B05C0004EBF2 /* heart-empty@3x.png */; };
+		DAC005A21C25B05C0004EBF2 /* heart-full.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005991C25B05C0004EBF2 /* heart-full.png */; };
+		DAC005A31C25B05C0004EBF2 /* heart-full@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC0059A1C25B05C0004EBF2 /* heart-full@2x.png */; };
+		DAC005A41C25B05C0004EBF2 /* heart-full@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC0059B1C25B05C0004EBF2 /* heart-full@3x.png */; };
+		DAC005A71C25B2B90004EBF2 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC005A61C25B2B90004EBF2 /* CircleSpinnerView.m */; };
+		DAC005AA1C25B8ED0004EBF2 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC005A91C25B8ED0004EBF2 /* LikeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +98,19 @@
 		DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 		DAB406C41C1E260D00ACC5D2 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
 		DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
+		DAC005931C25B05C0004EBF2 /* angle-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask.png"; sourceTree = "<group>"; };
+		DAC005941C25B05C0004EBF2 /* angle-mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@2x.png"; sourceTree = "<group>"; };
+		DAC005951C25B05C0004EBF2 /* angle-mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask@3x.png"; sourceTree = "<group>"; };
+		DAC005961C25B05C0004EBF2 /* heart-empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-empty.png"; sourceTree = "<group>"; };
+		DAC005971C25B05C0004EBF2 /* heart-empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-empty@2x.png"; sourceTree = "<group>"; };
+		DAC005981C25B05C0004EBF2 /* heart-empty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-empty@3x.png"; sourceTree = "<group>"; };
+		DAC005991C25B05C0004EBF2 /* heart-full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-full.png"; sourceTree = "<group>"; };
+		DAC0059A1C25B05C0004EBF2 /* heart-full@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-full@2x.png"; sourceTree = "<group>"; };
+		DAC0059B1C25B05C0004EBF2 /* heart-full@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart-full@3x.png"; sourceTree = "<group>"; };
+		DAC005A51C25B2B90004EBF2 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinnerView.h; sourceTree = "<group>"; };
+		DAC005A61C25B2B90004EBF2 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpinnerView.m; sourceTree = "<group>"; };
+		DAC005A81C25B8ED0004EBF2 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		DAC005A91C25B8ED0004EBF2 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +171,10 @@
 				DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */,
 				DA014F921C21127E00419768 /* ShareUtilities.h */,
 				DA014F931C21127E00419768 /* ShareUtilities.m */,
+				DAC005A51C25B2B90004EBF2 /* CircleSpinnerView.h */,
+				DAC005A61C25B2B90004EBF2 /* CircleSpinnerView.m */,
+				DAC005A81C25B8ED0004EBF2 /* LikeButton.h */,
+				DAC005A91C25B8ED0004EBF2 /* LikeButton.m */,
 				DA9147121C0BA48A00EF7DAF /* Images */,
 				DA9146EB1C0BA39600EF7DAF /* Instabloc */,
 				DA9147051C0BA39600EF7DAF /* InstablocTests */,
@@ -171,6 +199,15 @@
 				DA9146F01C0BA39600EF7DAF /* AppDelegate.h */,
 				DA9146F11C0BA39600EF7DAF /* AppDelegate.m */,
 				DA9146F91C0BA39600EF7DAF /* Images.xcassets */,
+				DAC005931C25B05C0004EBF2 /* angle-mask.png */,
+				DAC005941C25B05C0004EBF2 /* angle-mask@2x.png */,
+				DAC005951C25B05C0004EBF2 /* angle-mask@3x.png */,
+				DAC005961C25B05C0004EBF2 /* heart-empty.png */,
+				DAC005971C25B05C0004EBF2 /* heart-empty@2x.png */,
+				DAC005981C25B05C0004EBF2 /* heart-empty@3x.png */,
+				DAC005991C25B05C0004EBF2 /* heart-full.png */,
+				DAC0059A1C25B05C0004EBF2 /* heart-full@2x.png */,
+				DAC0059B1C25B05C0004EBF2 /* heart-full@3x.png */,
 				DA9146FB1C0BA39600EF7DAF /* LaunchScreen.xib */,
 				DA9146EC1C0BA39600EF7DAF /* Supporting Files */,
 			);
@@ -303,15 +340,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC005A21C25B05C0004EBF2 /* heart-full.png in Resources */,
 				DA9147251C0BA4AB00EF7DAF /* 1.jpg in Resources */,
 				DA91471D1C0BA4AB00EF7DAF /* 5.jpg in Resources */,
+				DAC0059F1C25B05C0004EBF2 /* heart-empty.png in Resources */,
+				DAC005A01C25B05C0004EBF2 /* heart-empty@2x.png in Resources */,
 				DA9146FD1C0BA39600EF7DAF /* LaunchScreen.xib in Resources */,
 				DA91471E1C0BA4AB00EF7DAF /* 10.jpg in Resources */,
+				DAC005A41C25B05C0004EBF2 /* heart-full@3x.png in Resources */,
 				DA9147201C0BA4AB00EF7DAF /* 9.jpg in Resources */,
+				DAC0059E1C25B05C0004EBF2 /* angle-mask@3x.png in Resources */,
 				DA9147231C0BA4AB00EF7DAF /* 2a.jpg in Resources */,
+				DAC0059D1C25B05C0004EBF2 /* angle-mask@2x.png in Resources */,
+				DAC0059C1C25B05C0004EBF2 /* angle-mask.png in Resources */,
 				DA9147261C0BA4AB00EF7DAF /* 6.jpg in Resources */,
 				DA9147221C0BA4AB00EF7DAF /* 8.jpg in Resources */,
+				DAC005A31C25B05C0004EBF2 /* heart-full@2x.png in Resources */,
 				DA91471F1C0BA4AB00EF7DAF /* 4.jpg in Resources */,
+				DAC005A11C25B05C0004EBF2 /* heart-empty@3x.png in Resources */,
 				DA9147241C0BA4AB00EF7DAF /* 7.jpg in Resources */,
 				DA9147211C0BA4AB00EF7DAF /* 3.jpg in Resources */,
 				DA9146FA1C0BA39600EF7DAF /* Images.xcassets in Resources */,
@@ -390,6 +436,8 @@
 				DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */,
 				DA9146EF1C0BA39600EF7DAF /* main.m in Sources */,
 				DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */,
+				DAC005AA1C25B8ED0004EBF2 /* LikeButton.m in Sources */,
+				DAC005A71C25B2B90004EBF2 /* CircleSpinnerView.m in Sources */,
 				DA91472F1C0BA6FC00EF7DAF /* MediaPlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
