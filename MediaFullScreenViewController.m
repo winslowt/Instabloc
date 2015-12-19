@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
 
 @property (nonatomic, strong) UIButton *shareButton;
-//@property (nonatomic, strong) UINavigationBar *shareBar;
+
 
 @end
 

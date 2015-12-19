@@ -36,6 +36,16 @@
     
     
 }
+
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    MediaPlay *mediaItem = [DataStores sharedInstance].mediaItems[indexPath.row];
+    //of the data store, which is only 1
+    if (mediaItem.downloadState == MediaDownloadStateNeedsImage && self.isDecelerating && self.isScrolling) { //TODO: Add an extra check here to make sure we're not accelerating or dragging
+        [[DataStores sharedInstance] downloadImageForMediaItem:mediaItem];
+    }
+}
+
+
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
   
     [ShareUtilities shareMediaItem:cell.mediaItem fromVC:self];
@@ -50,6 +60,7 @@
         return 150;
     }
 }
+
 
 - (void) infiniteScrollIfNecessary {
     // #3
@@ -67,6 +78,47 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self infiniteScrollIfNecessary];
 }
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    self.isScrolling = YES;
+    NSLog(@"scrollViewWillBeginDragging");
+    
+}
+    
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerating {
+        //[super scrollViewDidEndDragging:scrollView willDecelerate:decelerate];    // pull to refresh
+        
+        if(!decelerating) {
+            self.isScrolling = NO;
+        }
+        NSLog(@"%@scrollViewDidEndDragging", self.isScrolling ? @"" : @"-");
+        
+        
+        self.decelerationRate = UIScrollViewDecelerationRateNormal;
+    
+
+    
+    //TODO: Use UIScrollViewDelegate methods to save variables that help you check decelerating state and dragging
+    
+    //TODO: If you set isDecelerating = YES, make sure to also set when you're not decelerating (isDecelerating = NO)
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    
+    self.isScrolling = YES;
+    NSLog(@"Scroll view is decelerating");
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    self.isScrolling = NO;
+    
+    NSLog(@"Scroll view is NOT decelerating");
+    
+}
+
 
 - (void) refreshControlDidFire:(UIRefreshControl *) sender {
     [[DataStores sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {

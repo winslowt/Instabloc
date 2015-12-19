@@ -50,6 +50,7 @@
 		C67E13FF12873938B833A8E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA014F921C21127E00419768 /* ShareUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtilities.h; sourceTree = "<group>"; };
 		DA014F931C21127E00419768 /* ShareUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtilities.m; sourceTree = "<group>"; };
+		DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../Desktop/MyPlayground.playground; sourceTree = "<group>"; };
 		DA4A463E1C111B08002A39CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DA4A463F1C111B08002A39CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DA9146E91C0BA39600EF7DAF /* Instabloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instabloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +138,7 @@
 				DA9147311C0BA77F00EF7DAF /* Comments.m */,
 				DA9147331C0BA7EA00EF7DAF /* DataStores.h */,
 				DA9147341C0BA7EA00EF7DAF /* DataStores.m */,
+				DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */,
 				DA9147361C0BAA5500EF7DAF /* MediaTableViewCell.h */,
 				DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */,
 				DA4A463E1C111B08002A39CD /* LoginViewController.h */,
