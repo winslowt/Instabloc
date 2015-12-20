@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ComposeCommentView.h">
+   </FileRef>
+   <FileRef
+      location = "group:ComposeCommentView.m">
+   </FileRef>
+   <FileRef
       location = "group:LikeButton.h">
    </FileRef>
    <FileRef

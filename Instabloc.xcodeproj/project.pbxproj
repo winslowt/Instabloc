@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A3BCC4F327FB2059EAAD3EC5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DAD47952488C3E0A13FE88 /* libPods.a */; };
 		DA014F941C21127E00419768 /* ShareUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA014F931C21127E00419768 /* ShareUtilities.m */; };
+		DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1312EE1C272C1800357679 /* ComposeCommentView.m */; };
 		DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A463F1C111B08002A39CD /* LoginViewController.m */; };
 		DA9146EF1C0BA39600EF7DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146EE1C0BA39600EF7DAF /* main.m */; };
 		DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146F11C0BA39600EF7DAF /* AppDelegate.m */; };
@@ -62,6 +63,8 @@
 		DA014F921C21127E00419768 /* ShareUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtilities.h; sourceTree = "<group>"; };
 		DA014F931C21127E00419768 /* ShareUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtilities.m; sourceTree = "<group>"; };
 		DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../Desktop/MyPlayground.playground; sourceTree = "<group>"; };
+		DA1312ED1C272C1800357679 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
+		DA1312EE1C272C1800357679 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
 		DA4A463E1C111B08002A39CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DA4A463F1C111B08002A39CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DA9146E91C0BA39600EF7DAF /* Instabloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instabloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +178,8 @@
 				DAC005A61C25B2B90004EBF2 /* CircleSpinnerView.m */,
 				DAC005A81C25B8ED0004EBF2 /* LikeButton.h */,
 				DAC005A91C25B8ED0004EBF2 /* LikeButton.m */,
+				DA1312ED1C272C1800357679 /* ComposeCommentView.h */,
+				DA1312EE1C272C1800357679 /* ComposeCommentView.m */,
 				DA9147121C0BA48A00EF7DAF /* Images */,
 				DA9146EB1C0BA39600EF7DAF /* Instabloc */,
 				DA9147051C0BA39600EF7DAF /* InstablocTests */,
@@ -437,6 +442,7 @@
 				DA9146EF1C0BA39600EF7DAF /* main.m in Sources */,
 				DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */,
 				DAC005AA1C25B8ED0004EBF2 /* LikeButton.m in Sources */,
+				DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */,
 				DAC005A71C25B2B90004EBF2 /* CircleSpinnerView.m in Sources */,
 				DA91472F1C0BA6FC00EF7DAF /* MediaPlay.m in Sources */,
 			);
