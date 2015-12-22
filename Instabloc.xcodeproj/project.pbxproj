@@ -9,6 +9,21 @@
 /* Begin PBXBuildFile section */
 		A3BCC4F327FB2059EAAD3EC5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DAD47952488C3E0A13FE88 /* libPods.a */; };
 		DA014F941C21127E00419768 /* ShareUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA014F931C21127E00419768 /* ShareUtilities.m */; };
+		DA0B4FF01C28C587000943FA /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FE41C28C587000943FA /* camera.png */; };
+		DA0B4FF11C28C587000943FA /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FE51C28C587000943FA /* camera@2x.png */; };
+		DA0B4FF21C28C587000943FA /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FE61C28C587000943FA /* camera@3x.png */; };
+		DA0B4FF31C28C587000943FA /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FE71C28C587000943FA /* road.png */; };
+		DA0B4FF41C28C587000943FA /* road@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FE81C28C587000943FA /* road@2x.png */; };
+		DA0B4FF51C28C587000943FA /* road@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FE91C28C587000943FA /* road@3x.png */; };
+		DA0B4FF61C28C587000943FA /* rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FEA1C28C587000943FA /* rotate.png */; };
+		DA0B4FF71C28C587000943FA /* rotate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FEB1C28C587000943FA /* rotate@2x.png */; };
+		DA0B4FF81C28C587000943FA /* rotate@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FEC1C28C587000943FA /* rotate@3x.png */; };
+		DA0B4FF91C28C587000943FA /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FED1C28C587000943FA /* x.png */; };
+		DA0B4FFA1C28C587000943FA /* x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FEE1C28C587000943FA /* x@2x.png */; };
+		DA0B4FFB1C28C587000943FA /* x@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0B4FEF1C28C587000943FA /* x@3x.png */; };
+		DA0B4FFE1C28C5F0000943FA /* CameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B4FFD1C28C5F0000943FA /* CameraToolbar.m */; };
+		DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50001C28C76A000943FA /* CameraViewController.m */; };
+		DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */; };
 		DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1312EE1C272C1800357679 /* ComposeCommentView.m */; };
 		DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A463F1C111B08002A39CD /* LoginViewController.m */; };
 		DA9146EF1C0BA39600EF7DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146EE1C0BA39600EF7DAF /* main.m */; };
@@ -62,6 +77,24 @@
 		C67E13FF12873938B833A8E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA014F921C21127E00419768 /* ShareUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtilities.h; sourceTree = "<group>"; };
 		DA014F931C21127E00419768 /* ShareUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareUtilities.m; sourceTree = "<group>"; };
+		DA0B4FE41C28C587000943FA /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		DA0B4FE51C28C587000943FA /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		DA0B4FE61C28C587000943FA /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
+		DA0B4FE71C28C587000943FA /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = road.png; sourceTree = "<group>"; };
+		DA0B4FE81C28C587000943FA /* road@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "road@2x.png"; sourceTree = "<group>"; };
+		DA0B4FE91C28C587000943FA /* road@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "road@3x.png"; sourceTree = "<group>"; };
+		DA0B4FEA1C28C587000943FA /* rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rotate.png; sourceTree = "<group>"; };
+		DA0B4FEB1C28C587000943FA /* rotate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rotate@2x.png"; sourceTree = "<group>"; };
+		DA0B4FEC1C28C587000943FA /* rotate@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rotate@3x.png"; sourceTree = "<group>"; };
+		DA0B4FED1C28C587000943FA /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		DA0B4FEE1C28C587000943FA /* x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x@2x.png"; sourceTree = "<group>"; };
+		DA0B4FEF1C28C587000943FA /* x@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x@3x.png"; sourceTree = "<group>"; };
+		DA0B4FFC1C28C5F0000943FA /* CameraToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraToolbar.h; sourceTree = "<group>"; };
+		DA0B4FFD1C28C5F0000943FA /* CameraToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraToolbar.m; sourceTree = "<group>"; };
+		DA0B4FFF1C28C76A000943FA /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		DA0B50001C28C76A000943FA /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		DA0B50021C28CDB2000943FA /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
+		DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
 		DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../Desktop/MyPlayground.playground; sourceTree = "<group>"; };
 		DA1312ED1C272C1800357679 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		DA1312EE1C272C1800357679 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
@@ -180,6 +213,12 @@
 				DAC005A91C25B8ED0004EBF2 /* LikeButton.m */,
 				DA1312ED1C272C1800357679 /* ComposeCommentView.h */,
 				DA1312EE1C272C1800357679 /* ComposeCommentView.m */,
+				DA0B4FFC1C28C5F0000943FA /* CameraToolbar.h */,
+				DA0B4FFD1C28C5F0000943FA /* CameraToolbar.m */,
+				DA0B4FFF1C28C76A000943FA /* CameraViewController.h */,
+				DA0B50001C28C76A000943FA /* CameraViewController.m */,
+				DA0B50021C28CDB2000943FA /* UIImage+ImageUtilities.h */,
+				DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */,
 				DA9147121C0BA48A00EF7DAF /* Images */,
 				DA9146EB1C0BA39600EF7DAF /* Instabloc */,
 				DA9147051C0BA39600EF7DAF /* InstablocTests */,
@@ -204,6 +243,18 @@
 				DA9146F01C0BA39600EF7DAF /* AppDelegate.h */,
 				DA9146F11C0BA39600EF7DAF /* AppDelegate.m */,
 				DA9146F91C0BA39600EF7DAF /* Images.xcassets */,
+				DA0B4FE41C28C587000943FA /* camera.png */,
+				DA0B4FE51C28C587000943FA /* camera@2x.png */,
+				DA0B4FE61C28C587000943FA /* camera@3x.png */,
+				DA0B4FE71C28C587000943FA /* road.png */,
+				DA0B4FE81C28C587000943FA /* road@2x.png */,
+				DA0B4FE91C28C587000943FA /* road@3x.png */,
+				DA0B4FEA1C28C587000943FA /* rotate.png */,
+				DA0B4FEB1C28C587000943FA /* rotate@2x.png */,
+				DA0B4FEC1C28C587000943FA /* rotate@3x.png */,
+				DA0B4FED1C28C587000943FA /* x.png */,
+				DA0B4FEE1C28C587000943FA /* x@2x.png */,
+				DA0B4FEF1C28C587000943FA /* x@3x.png */,
 				DAC005931C25B05C0004EBF2 /* angle-mask.png */,
 				DAC005941C25B05C0004EBF2 /* angle-mask@2x.png */,
 				DAC005951C25B05C0004EBF2 /* angle-mask@3x.png */,
@@ -345,25 +396,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0B4FF61C28C587000943FA /* rotate.png in Resources */,
+				DA0B4FF01C28C587000943FA /* camera.png in Resources */,
 				DAC005A21C25B05C0004EBF2 /* heart-full.png in Resources */,
 				DA9147251C0BA4AB00EF7DAF /* 1.jpg in Resources */,
 				DA91471D1C0BA4AB00EF7DAF /* 5.jpg in Resources */,
 				DAC0059F1C25B05C0004EBF2 /* heart-empty.png in Resources */,
 				DAC005A01C25B05C0004EBF2 /* heart-empty@2x.png in Resources */,
 				DA9146FD1C0BA39600EF7DAF /* LaunchScreen.xib in Resources */,
+				DA0B4FFB1C28C587000943FA /* x@3x.png in Resources */,
 				DA91471E1C0BA4AB00EF7DAF /* 10.jpg in Resources */,
 				DAC005A41C25B05C0004EBF2 /* heart-full@3x.png in Resources */,
 				DA9147201C0BA4AB00EF7DAF /* 9.jpg in Resources */,
 				DAC0059E1C25B05C0004EBF2 /* angle-mask@3x.png in Resources */,
+				DA0B4FF11C28C587000943FA /* camera@2x.png in Resources */,
+				DA0B4FF71C28C587000943FA /* rotate@2x.png in Resources */,
 				DA9147231C0BA4AB00EF7DAF /* 2a.jpg in Resources */,
 				DAC0059D1C25B05C0004EBF2 /* angle-mask@2x.png in Resources */,
 				DAC0059C1C25B05C0004EBF2 /* angle-mask.png in Resources */,
 				DA9147261C0BA4AB00EF7DAF /* 6.jpg in Resources */,
+				DA0B4FF91C28C587000943FA /* x.png in Resources */,
+				DA0B4FF31C28C587000943FA /* road.png in Resources */,
 				DA9147221C0BA4AB00EF7DAF /* 8.jpg in Resources */,
 				DAC005A31C25B05C0004EBF2 /* heart-full@2x.png in Resources */,
 				DA91471F1C0BA4AB00EF7DAF /* 4.jpg in Resources */,
+				DA0B4FF81C28C587000943FA /* rotate@3x.png in Resources */,
 				DAC005A11C25B05C0004EBF2 /* heart-empty@3x.png in Resources */,
+				DA0B4FF21C28C587000943FA /* camera@3x.png in Resources */,
+				DA0B4FF51C28C587000943FA /* road@3x.png in Resources */,
+				DA0B4FF41C28C587000943FA /* road@2x.png in Resources */,
 				DA9147241C0BA4AB00EF7DAF /* 7.jpg in Resources */,
+				DA0B4FFA1C28C587000943FA /* x@2x.png in Resources */,
 				DA9147211C0BA4AB00EF7DAF /* 3.jpg in Resources */,
 				DA9146FA1C0BA39600EF7DAF /* Images.xcassets in Resources */,
 			);
@@ -440,8 +503,11 @@
 				DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */,
 				DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */,
 				DA9146EF1C0BA39600EF7DAF /* main.m in Sources */,
+				DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */,
+				DA0B4FFE1C28C5F0000943FA /* CameraToolbar.m in Sources */,
 				DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */,
 				DAC005AA1C25B8ED0004EBF2 /* LikeButton.m in Sources */,
+				DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */,
 				DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */,
 				DAC005A71C25B2B90004EBF2 /* CircleSpinnerView.m in Sources */,
 				DA91472F1C0BA6FC00EF7DAF /* MediaPlay.m in Sources */,
