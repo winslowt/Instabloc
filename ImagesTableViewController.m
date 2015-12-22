@@ -66,13 +66,13 @@
     [cell stopComposingComment];
 }
 
-- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    MediaPlay *mediaItem = [DataStores sharedInstance].mediaItems[indexPath.row];
-    //of the data store, which is only 1
-    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) { //TODO: Add an extra check here to make sure we're not accelerating or dragging
-        [[DataStores sharedInstance] downloadImageForMediaItem:mediaItem];
-    }
-}
+//- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//    MediaPlay *mediaItem = [DataStores sharedInstance].mediaItems[indexPath.row];
+//    //of the data store, which is only 1
+//    if (mediaItem.downloadState == MediaDownloadStateNeedsImage) { //TODO: Add an extra check here to make sure we're not accelerating or dragging
+//        [[DataStores sharedInstance] downloadImageForMediaItem:mediaItem];
+//    }
+//}
 // && self.isDecelerating && self.isScrolling
 
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
@@ -139,14 +139,20 @@
 //    NSLog(@"Scroll view is decelerating");
 //    
 //}
-//
-//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    
-//    self.isScrolling = NO;
-//    
-//    NSLog(@"Scroll view is NOT decelerating");
-//    
-//}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    for (NSIndexPath *indexPath in self.tableView.indexPathsForVisibleRows) {
+        
+        MediaPlay *mediaItem = [DataStores sharedInstance].mediaItems[indexPath.row];
+        //of the data store, which is only 1
+        if (mediaItem.downloadState == MediaDownloadStateNeedsImage) { 
+            [[DataStores sharedInstance] downloadImageForMediaItem:mediaItem];
+        }
+        
+    }
+    
+}
 
 
 - (void) refreshControlDidFire:(UIRefreshControl *) sender {

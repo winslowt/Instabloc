@@ -34,6 +34,7 @@
         self.caption = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(caption))];
         self.comments = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(comments))];
         self.likeState = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(likeState))];
+        self.postLikes = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(postLikes))];
 
     }
     
@@ -48,6 +49,7 @@
     [aCoder encodeObject:self.caption forKey:NSStringFromSelector(@selector(caption))];
     [aCoder encodeObject:self.comments forKey:NSStringFromSelector(@selector(comments))];
     [aCoder encodeInteger:self.likeState forKey:NSStringFromSelector(@selector(likeState))];
+    [aCoder encodeInteger:self.postLikes forKey:NSStringFromSelector(@selector(postLikes))];
 }
     
 
@@ -89,6 +91,9 @@
         BOOL userHasLiked = [mediaDictionary[@"user_has_liked"] boolValue];
         
         self.likeState = userHasLiked ? LikeStateLiked : LikeStateNotLiked;
+        
+        self.postLikes = [mediaDictionary [@"likes"][@"count"]integerValue];
+        
     }
     
     return self;

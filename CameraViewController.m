@@ -226,15 +226,21 @@
             [self.session addInput:newVideoInput];
             [self.session commitConfiguration];
             
-            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                fakeView.alpha = 0;
-            } completion:^(BOOL finished) {
-                [fakeView removeFromSuperview];
-            }];
+            [UIView animateWithDuration:0.5
+                                  delay:0
+                 usingSpringWithDamping:.7
+                  initialSpringVelocity:0.5
+                                options:UIViewAnimationCurveEaseInOut
+                             animations:^{
+                                 fakeView.alpha = 0;
+                             }
+                             completion:^(BOOL finished) {
+                                 [fakeView removeFromSuperview];
+                             }];
+    
         }
     }
 }
-
 - (void) rightButtonPressedOnToolbar:(CameraToolbar *)toolbar {
     NSLog(@"Photo library button pressed.");
 }
