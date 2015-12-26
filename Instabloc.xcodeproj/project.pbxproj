@@ -25,6 +25,11 @@
 		DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50001C28C76A000943FA /* CameraViewController.m */; };
 		DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */; };
 		DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1312EE1C272C1800357679 /* ComposeCommentView.m */; };
+		DA3CB49E1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */; };
+		DA3CB4A11C2DD2D800FBB9FC /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */; };
+		DA3CB4A41C2DD5FA00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */; };
+		DA3CB4A71C2DD6DC00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */; };
+		DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */; };
 		DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A463F1C111B08002A39CD /* LoginViewController.m */; };
 		DA9146EF1C0BA39600EF7DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146EE1C0BA39600EF7DAF /* main.m */; };
 		DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146F11C0BA39600EF7DAF /* AppDelegate.m */; };
@@ -98,6 +103,16 @@
 		DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../Desktop/MyPlayground.playground; sourceTree = "<group>"; };
 		DA1312ED1C272C1800357679 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		DA1312EE1C272C1800357679 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
+		DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageByScalingToSize.h"; sourceTree = "<group>"; };
+		DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageByScalingToSize.m"; sourceTree = "<group>"; };
+		DA3CB49F1C2DD2D800FBB9FC /* CropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropBox.h; sourceTree = "<group>"; };
+		DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropBox.m; sourceTree = "<group>"; };
+		DA3CB4A21C2DD5FA00FBB9FC /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
+		DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
+		DA3CB4A51C2DD6DC00FBB9FC /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
+		DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
+		DA3CB4A81C2DDB2B00FBB9FC /* ImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLibraryViewController.h; sourceTree = "<group>"; };
+		DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
 		DA4A463E1C111B08002A39CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DA4A463F1C111B08002A39CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		DA9146E91C0BA39600EF7DAF /* Instabloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instabloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +234,16 @@
 				DA0B50001C28C76A000943FA /* CameraViewController.m */,
 				DA0B50021C28CDB2000943FA /* UIImage+ImageUtilities.h */,
 				DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */,
+				DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */,
+				DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */,
+				DA3CB49F1C2DD2D800FBB9FC /* CropBox.h */,
+				DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */,
+				DA3CB4A21C2DD5FA00FBB9FC /* CropImageViewController.h */,
+				DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */,
+				DA3CB4A51C2DD6DC00FBB9FC /* CropImageViewController.h */,
+				DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */,
+				DA3CB4A81C2DDB2B00FBB9FC /* ImageLibraryViewController.h */,
+				DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */,
 				DA9147121C0BA48A00EF7DAF /* Images */,
 				DA9146EB1C0BA39600EF7DAF /* Instabloc */,
 				DA9147051C0BA39600EF7DAF /* InstablocTests */,
@@ -365,6 +390,7 @@
 				TargetAttributes = {
 					DA9146E81C0BA39600EF7DAF = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = SQV79M6VZF;
 					};
 					DA9147011C0BA39600EF7DAF = {
 						CreatedOnToolsVersion = 6.4;
@@ -496,8 +522,10 @@
 			files = (
 				DAB406C61C1E260D00ACC5D2 /* MediaFullScreenViewController.m in Sources */,
 				DA9147291C0BA51100EF7DAF /* ImagesTableViewController.m in Sources */,
+				DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */,
 				DA014F941C21127E00419768 /* ShareUtilities.m in Sources */,
 				DA9147321C0BA77F00EF7DAF /* Comments.m in Sources */,
+				DA3CB49E1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m in Sources */,
 				DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */,
 				DA91472C1C0BA69400EF7DAF /* User.m in Sources */,
 				DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */,
@@ -505,12 +533,15 @@
 				DA9146EF1C0BA39600EF7DAF /* main.m in Sources */,
 				DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */,
 				DA0B4FFE1C28C5F0000943FA /* CameraToolbar.m in Sources */,
+				DA3CB4A71C2DD6DC00FBB9FC /* CropImageViewController.m in Sources */,
 				DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */,
 				DAC005AA1C25B8ED0004EBF2 /* LikeButton.m in Sources */,
+				DA3CB4A41C2DD5FA00FBB9FC /* CropImageViewController.m in Sources */,
 				DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */,
 				DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */,
 				DAC005A71C25B2B90004EBF2 /* CircleSpinnerView.m in Sources */,
 				DA91472F1C0BA6FC00EF7DAF /* MediaPlay.m in Sources */,
+				DA3CB4A11C2DD2D800FBB9FC /* CropBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,9 +663,13 @@
 			baseConfigurationReference = C67E13FF12873938B833A8E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Instabloc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -644,9 +679,13 @@
 			baseConfigurationReference = 15A59C472CC154A960D997D0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Instabloc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

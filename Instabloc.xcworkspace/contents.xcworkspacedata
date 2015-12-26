@@ -2,6 +2,30 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ImageLibraryViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:ImageLibraryViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:CropImageViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:CropImageViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:CropBox.h">
+   </FileRef>
+   <FileRef
+      location = "group:CropBox.m">
+   </FileRef>
+   <FileRef
+      location = "group:UIImage+ImageByScalingToSize.h">
+   </FileRef>
+   <FileRef
+      location = "group:UIImage+ImageByScalingToSize.m">
+   </FileRef>
+   <FileRef
       location = "group:UIImage+ImageUtilities.h">
    </FileRef>
    <FileRef
