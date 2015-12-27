@@ -25,7 +25,6 @@
 		DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50001C28C76A000943FA /* CameraViewController.m */; };
 		DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */; };
 		DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1312EE1C272C1800357679 /* ComposeCommentView.m */; };
-		DA3CB49E1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */; };
 		DA3CB4A11C2DD2D800FBB9FC /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */; };
 		DA3CB4A41C2DD5FA00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */; };
 		DA3CB4A71C2DD6DC00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */; };
@@ -103,8 +102,6 @@
 		DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
 		DA1312ED1C272C1800357679 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		DA1312EE1C272C1800357679 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
-		DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageByScalingToSize.h"; sourceTree = "<group>"; };
-		DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageByScalingToSize.m"; sourceTree = "<group>"; };
 		DA3CB49F1C2DD2D800FBB9FC /* CropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropBox.h; sourceTree = "<group>"; };
 		DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropBox.m; sourceTree = "<group>"; };
 		DA3CB4A21C2DD5FA00FBB9FC /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
@@ -235,8 +232,6 @@
 				DA0B50001C28C76A000943FA /* CameraViewController.m */,
 				DA0B50021C28CDB2000943FA /* UIImage+ImageUtilities.h */,
 				DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */,
-				DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */,
-				DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */,
 				DA3CB49F1C2DD2D800FBB9FC /* CropBox.h */,
 				DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */,
 				DA3CB4A21C2DD5FA00FBB9FC /* CropImageViewController.h */,
@@ -528,7 +523,6 @@
 				DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */,
 				DA014F941C21127E00419768 /* ShareUtilities.m in Sources */,
 				DA9147321C0BA77F00EF7DAF /* Comments.m in Sources */,
-				DA3CB49E1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m in Sources */,
 				DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */,
 				DA91472C1C0BA69400EF7DAF /* User.m in Sources */,
 				DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */,
@@ -709,7 +703,7 @@
 				INFOPLIST_FILE = InstablocTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instabloc.app/Instabloc";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -724,7 +718,7 @@
 				INFOPLIST_FILE = InstablocTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instabloc.app/Instabloc";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
