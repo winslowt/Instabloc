@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PostToInstagramViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:PostToInstagramViewController.m">
+   </FileRef>
+   <FileRef
       location = "group:ImageLibraryViewController.h">
    </FileRef>
    <FileRef

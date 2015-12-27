@@ -31,6 +31,7 @@
 		DA3CB4A71C2DD6DC00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */; };
 		DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */; };
 		DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A463F1C111B08002A39CD /* LoginViewController.m */; };
+		DA8D60881C306B4200D03381 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8D60871C306B4200D03381 /* PostToInstagramViewController.m */; };
 		DA9146EF1C0BA39600EF7DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146EE1C0BA39600EF7DAF /* main.m */; };
 		DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9146F11C0BA39600EF7DAF /* AppDelegate.m */; };
 		DA9146FA1C0BA39600EF7DAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA9146F91C0BA39600EF7DAF /* Images.xcassets */; };
@@ -100,7 +101,6 @@
 		DA0B50001C28C76A000943FA /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		DA0B50021C28CDB2000943FA /* UIImage+ImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageUtilities.h"; sourceTree = "<group>"; };
 		DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
-		DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../Desktop/MyPlayground.playground; sourceTree = "<group>"; };
 		DA1312ED1C272C1800357679 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		DA1312EE1C272C1800357679 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
 		DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageByScalingToSize.h"; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
 		DA4A463E1C111B08002A39CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		DA4A463F1C111B08002A39CD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		DA8D60861C306B4200D03381 /* PostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostToInstagramViewController.h; sourceTree = "<group>"; };
+		DA8D60871C306B4200D03381 /* PostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostToInstagramViewController.m; sourceTree = "<group>"; };
 		DA9146E91C0BA39600EF7DAF /* Instabloc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instabloc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9146ED1C0BA39600EF7DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA9146EE1C0BA39600EF7DAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -213,7 +215,6 @@
 				DA9147311C0BA77F00EF7DAF /* Comments.m */,
 				DA9147331C0BA7EA00EF7DAF /* DataStores.h */,
 				DA9147341C0BA7EA00EF7DAF /* DataStores.m */,
-				DA0B6A4A1C24E44B00B6C16B /* MyPlayground.playground */,
 				DA9147361C0BAA5500EF7DAF /* MediaTableViewCell.h */,
 				DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */,
 				DA4A463E1C111B08002A39CD /* LoginViewController.h */,
@@ -244,6 +245,8 @@
 				DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */,
 				DA3CB4A81C2DDB2B00FBB9FC /* ImageLibraryViewController.h */,
 				DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */,
+				DA8D60861C306B4200D03381 /* PostToInstagramViewController.h */,
+				DA8D60871C306B4200D03381 /* PostToInstagramViewController.m */,
 				DA9147121C0BA48A00EF7DAF /* Images */,
 				DA9146EB1C0BA39600EF7DAF /* Instabloc */,
 				DA9147051C0BA39600EF7DAF /* InstablocTests */,
@@ -529,6 +532,7 @@
 				DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */,
 				DA91472C1C0BA69400EF7DAF /* User.m in Sources */,
 				DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */,
+				DA8D60881C306B4200D03381 /* PostToInstagramViewController.m in Sources */,
 				DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */,
 				DA9146EF1C0BA39600EF7DAF /* main.m in Sources */,
 				DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */,
