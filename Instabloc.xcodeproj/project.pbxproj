@@ -25,6 +25,7 @@
 		DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50001C28C76A000943FA /* CameraViewController.m */; };
 		DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */; };
 		DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1312EE1C272C1800357679 /* ComposeCommentView.m */; };
+		DA31E2BF1C31A5E900004C2A /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */; };
 		DA3CB4A11C2DD2D800FBB9FC /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */; };
 		DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */; };
 		DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A463F1C111B08002A39CD /* LoginViewController.m */; };
@@ -512,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA31E2BF1C31A5E900004C2A /* CropImageViewController.m in Sources */,
 				DAB406C61C1E260D00ACC5D2 /* MediaFullScreenViewController.m in Sources */,
 				DA9147291C0BA51100EF7DAF /* ImagesTableViewController.m in Sources */,
 				DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */,

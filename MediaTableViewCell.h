@@ -26,13 +26,17 @@
 @property (nonatomic, strong) MediaPlay *mediaItem;
 @property (nonatomic, weak) id <MediaTableViewCellDelegate> delegate;
 @property (nonatomic, strong, readonly) ComposeCommentView *commentView;
+@property (nonatomic, strong) UITraitCollection *overrideTraitCollection;
 @property (nonatomic, strong) NSLayoutConstraint *imageHeightConstraint;
 //@property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHeightConstraint;
 //@property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *imageWidthConstraint;
 
 
-+ (CGFloat) heightForMediaItem:(MediaPlay *)mediaItem width:(CGFloat)width;
+
++ (CGFloat) heightForMediaItem:(MediaPlay *)mediaItem width:(CGFloat)width traitCollection:(UITraitCollection *) traitCollection;
+
+
 - (void) stopComposingComment;
 
 
