@@ -14,7 +14,7 @@
 #import "CropBox.h"
 #import "ImageLibraryViewController.h"
 
-@interface CameraViewController () <CameraToolbarDelegate, ImageLibraryViewControllerDelegate>
+@interface CameraViewController () <CameraToolbarDelegate, UIAlertViewDelegate, ImageLibraryViewControllerDelegate>
 
 @property (nonatomic, strong) UIView *imagePreview;
 

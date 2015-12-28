@@ -25,10 +25,7 @@
 		DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50001C28C76A000943FA /* CameraViewController.m */; };
 		DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */; };
 		DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1312EE1C272C1800357679 /* ComposeCommentView.m */; };
-		DA3CB49E1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */; };
 		DA3CB4A11C2DD2D800FBB9FC /* CropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */; };
-		DA3CB4A41C2DD5FA00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */; };
-		DA3CB4A71C2DD6DC00FBB9FC /* CropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */; };
 		DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */; };
 		DA4A46401C111B08002A39CD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4A463F1C111B08002A39CD /* LoginViewController.m */; };
 		DA8D60881C306B4200D03381 /* PostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8D60871C306B4200D03381 /* PostToInstagramViewController.m */; };
@@ -103,14 +100,10 @@
 		DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageUtilities.m"; sourceTree = "<group>"; };
 		DA1312ED1C272C1800357679 /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
 		DA1312EE1C272C1800357679 /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
-		DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageByScalingToSize.h"; sourceTree = "<group>"; };
-		DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageByScalingToSize.m"; sourceTree = "<group>"; };
 		DA3CB49F1C2DD2D800FBB9FC /* CropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropBox.h; sourceTree = "<group>"; };
 		DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropBox.m; sourceTree = "<group>"; };
 		DA3CB4A21C2DD5FA00FBB9FC /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
 		DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
-		DA3CB4A51C2DD6DC00FBB9FC /* CropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropImageViewController.h; sourceTree = "<group>"; };
-		DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropImageViewController.m; sourceTree = "<group>"; };
 		DA3CB4A81C2DDB2B00FBB9FC /* ImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLibraryViewController.h; sourceTree = "<group>"; };
 		DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLibraryViewController.m; sourceTree = "<group>"; };
 		DA4A463E1C111B08002A39CD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -235,14 +228,10 @@
 				DA0B50001C28C76A000943FA /* CameraViewController.m */,
 				DA0B50021C28CDB2000943FA /* UIImage+ImageUtilities.h */,
 				DA0B50031C28CDB2000943FA /* UIImage+ImageUtilities.m */,
-				DA3CB49C1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.h */,
-				DA3CB49D1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m */,
 				DA3CB49F1C2DD2D800FBB9FC /* CropBox.h */,
 				DA3CB4A01C2DD2D800FBB9FC /* CropBox.m */,
 				DA3CB4A21C2DD5FA00FBB9FC /* CropImageViewController.h */,
 				DA3CB4A31C2DD5FA00FBB9FC /* CropImageViewController.m */,
-				DA3CB4A51C2DD6DC00FBB9FC /* CropImageViewController.h */,
-				DA3CB4A61C2DD6DC00FBB9FC /* CropImageViewController.m */,
 				DA3CB4A81C2DDB2B00FBB9FC /* ImageLibraryViewController.h */,
 				DA3CB4A91C2DDB2B00FBB9FC /* ImageLibraryViewController.m */,
 				DA8D60861C306B4200D03381 /* PostToInstagramViewController.h */,
@@ -388,7 +377,7 @@
 		DA9146E11C0BA39600EF7DAF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Bloc;
 				TargetAttributes = {
 					DA9146E81C0BA39600EF7DAF = {
@@ -528,7 +517,6 @@
 				DA3CB4AA1C2DDB2B00FBB9FC /* ImageLibraryViewController.m in Sources */,
 				DA014F941C21127E00419768 /* ShareUtilities.m in Sources */,
 				DA9147321C0BA77F00EF7DAF /* Comments.m in Sources */,
-				DA3CB49E1C2DD0E600FBB9FC /* UIImage+ImageByScalingToSize.m in Sources */,
 				DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */,
 				DA91472C1C0BA69400EF7DAF /* User.m in Sources */,
 				DA9146F21C0BA39600EF7DAF /* AppDelegate.m in Sources */,
@@ -537,10 +525,8 @@
 				DA9146EF1C0BA39600EF7DAF /* main.m in Sources */,
 				DA0B50011C28C76A000943FA /* CameraViewController.m in Sources */,
 				DA0B4FFE1C28C5F0000943FA /* CameraToolbar.m in Sources */,
-				DA3CB4A71C2DD6DC00FBB9FC /* CropImageViewController.m in Sources */,
 				DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */,
 				DAC005AA1C25B8ED0004EBF2 /* LikeButton.m in Sources */,
-				DA3CB4A41C2DD5FA00FBB9FC /* CropImageViewController.m in Sources */,
 				DA0B50041C28CDB2000943FA /* UIImage+ImageUtilities.m in Sources */,
 				DA1312EF1C272C1800357679 /* ComposeCommentView.m in Sources */,
 				DAC005A71C25B2B90004EBF2 /* CircleSpinnerView.m in Sources */,
@@ -600,6 +586,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -672,6 +659,7 @@
 				INFOPLIST_FILE = Instabloc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Bloc.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -688,6 +676,7 @@
 				INFOPLIST_FILE = Instabloc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Bloc.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -708,6 +697,7 @@
 				);
 				INFOPLIST_FILE = InstablocTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Bloc.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instabloc.app/Instabloc";
 			};
@@ -723,6 +713,7 @@
 				);
 				INFOPLIST_FILE = InstablocTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Bloc.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Instabloc.app/Instabloc";
 			};
