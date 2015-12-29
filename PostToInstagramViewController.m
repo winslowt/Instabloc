@@ -7,6 +7,7 @@
 //
 
 #import "PostToInstagramViewController.h"
+#import "CollectionViewCell.h"
 
 @interface PostToInstagramViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIDocumentInteractionControllerDelegate>
 
@@ -45,7 +46,7 @@
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.itemSize = CGSizeMake(44, 64);
         flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        flowLayout.minimumInteritemSpacing = 10;
+        flowLayout.minimumInteritemSpacing = 20;
         flowLayout.minimumLineSpacing = 10;
         
         //^^create and configure a UICollectionViewLayout instance to define the layout of our filter collection veiw, and then use it to initializae a UICollection View--below set the collection view's delegate and datasource properties
@@ -61,7 +62,7 @@
         self.sendButton = [UIButton buttonWithType:UIButtonTypeSystem];
         self.sendButton.backgroundColor = [UIColor colorWithRed:0.345 green:0.318 blue:0.424 alpha:1]; /*#58516c*/
         self.sendButton.layer.cornerRadius = 5;
-         [self.sendButton setAttributedTitle:[self sendAttributedString] forState:UIControlStateNormal];
+        [self.sendButton setAttributedTitle:[self sendAttributedString] forState:UIControlStateNormal];
         [self.sendButton addTarget:self action:@selector(sendButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         self.sendBarButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Send", @"Send button") style:UIBarButtonItemStyleDone target:self action:@selector(sendButtonPressed:)];
@@ -99,7 +100,7 @@
         self.navigationItem.rightBarButtonItem = self.sendBarButton;
     }
     
-    [self.filterCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.filterCollectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.filterCollectionView.backgroundColor = [UIColor whiteColor];
@@ -145,36 +146,10 @@
 }
 
 - (UICollectionViewCell*) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    static NSInteger imageViewTag = 1000;
-    static NSInteger labelTag = 1001;
-    
-    UIImageView *thumbnail = (UIImageView *)[cell.contentView viewWithTag:imageViewTag];
-    UILabel *label = (UILabel *)[cell.contentView viewWithTag:labelTag];
-    
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.filterCollectionView.collectionViewLayout;
-    CGFloat thumbnailEdgeSize = flowLayout.itemSize.width;
-    
-    if (!thumbnail) {
-        thumbnail = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, thumbnailEdgeSize, thumbnailEdgeSize)];
-        thumbnail.contentMode = UIViewContentModeScaleAspectFill;
-        thumbnail.tag = imageViewTag;
-        thumbnail.clipsToBounds = YES;
-        
-        [cell.contentView addSubview:thumbnail];
-    }
-    
-    if (!label) {
-        label = [[UILabel alloc] initWithFrame:CGRectMake(0, thumbnailEdgeSize, thumbnailEdgeSize, 20)];
-        label.tag = labelTag;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:10];
-        [cell.contentView addSubview:label];
-    }
-    
-    thumbnail.image = self.filterImages[indexPath.row];
-    label.text = self.filterTitles[indexPath.row];
+    cell.imageView.image = self.filterImages[indexPath.row];
+    cell.nameLabel.text = self.filterTitles[indexPath.row];
     
     return cell;
 }
@@ -268,6 +243,41 @@
         if (moodyFilter) {
             [moodyFilter setValue:sourceCIImage forKey:kCIInputImageKey];
             [self addCIImageToCollectionView:moodyFilter.outputImage withFilterTitle:NSLocalizedString(@"Moody", @"Moody Filter")];
+        }
+    }];
+    
+    //circle splash distortion ************
+    
+    [self.photoFilterOperationQueue addOperationWithBlock:^{
+        CIFilter *boxBlurFilter = [CIFilter filterWithName:@"CIBoxBlur"];
+        
+        if (boxBlurFilter) {
+            [boxBlurFilter setValue:sourceCIImage forKey:kCIInputImageKey];
+            [self addCIImageToCollectionView:boxBlurFilter.outputImage withFilterTitle:NSLocalizedString(@"Box", @"Box Blur Filter")];
+        }
+    }];
+    
+    //sketch filter*******************
+    
+    [self.photoFilterOperationQueue addOperationWithBlock:^{
+        CIFilter *sketchFilter = [CIFilter filterWithName:@"CICrystallize"];
+        CIFilter *etchFilter = [CIFilter filterWithName:@"CIGloom"];
+        
+        if (sketchFilter) {
+            [sketchFilter setValue:sourceCIImage forKey:kCIInputImageKey];
+            
+            CIVector *sketchVector = [CIVector vectorWithString:@"[150 150]"];
+            [sketchFilter setValue:sketchVector forKeyPath:kCIInputCenterKey];
+            
+            CIImage *result = sketchFilter.outputImage;
+            
+            if (etchFilter) {
+                [etchFilter setValue:result forKeyPath:kCIInputImageKey];
+                [etchFilter setValue:@15 forKeyPath:kCIInputRadiusKey];
+                result = etchFilter.outputImage;
+            }
+            
+            [self addCIImageToCollectionView:result withFilterTitle:NSLocalizedString(@"Sketch", @"Sketch Filter")];
         }
     }];
     
