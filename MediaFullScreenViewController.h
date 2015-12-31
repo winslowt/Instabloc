@@ -15,6 +15,8 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIImageView *imageView;
 
+
+
 @property (nonatomic, strong) MediaPlay *media;
 
 - (instancetype) initWithMedia:(MediaPlay *)media;

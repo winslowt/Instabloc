@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+@property (nonatomic, strong) UITapGestureRecognizer *greyBackTap;
 
 @property (nonatomic, strong) UIButton *shareButton;
 
@@ -63,13 +64,24 @@
     
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
     
+    self.greyBackTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(greyBackTapped:)];
+    
+    
+    
     self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapFired:)];
     self.doubleTap.numberOfTapsRequired = 2;
+    
     
     [self.tap requireGestureRecognizerToFail:self.doubleTap];
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
+    
+    if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
+        
+        [self.view.window addGestureRecognizer:self.greyBackTap];
+    
+    }
 }
 
 -(void)shareAction:(id)sender {
@@ -87,6 +99,14 @@
 - (void) tapFired:(UITapGestureRecognizer *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void) greyBackTapped:(UITapGestureRecognizer *)sender {
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
 
 - (void) doubleTapFired:(UITapGestureRecognizer *)sender {
     if (self.scrollView.zoomScale == self.scrollView.minimumZoomScale) {
@@ -185,14 +205,5 @@
     return self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -19,6 +19,7 @@
 - (void) cell:(MediaTableViewCell *)cell didComposeComment:(NSString *)comment;
 
 
+
 @end
 
 @interface MediaTableViewCell : UITableViewCell
@@ -28,8 +29,6 @@
 @property (nonatomic, strong, readonly) ComposeCommentView *commentView;
 @property (nonatomic, strong) UITraitCollection *overrideTraitCollection;
 @property (nonatomic, strong) NSLayoutConstraint *imageHeightConstraint;
-//@property (nonatomic, strong) NSLayoutConstraint *usernameAndCaptionLabelHeightConstraint;
-//@property (nonatomic, strong) NSLayoutConstraint *commentLabelHeightConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *imageWidthConstraint;
 
 
