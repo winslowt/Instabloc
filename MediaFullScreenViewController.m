@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+@property (nonatomic, strong) UITapGestureRecognizer *greyBackTap;
 
 @property (nonatomic, strong) UIButton *shareButton;
 
@@ -63,6 +64,8 @@
     
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
     
+    self.greyBackTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(greyBackTapped:)];
+    
     self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapFired:)];
     self.doubleTap.numberOfTapsRequired = 2;
     
@@ -70,6 +73,11 @@
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
+    
+    if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
+        [self.view.window addGestureRecognizer:self.greyBackTap];
+        
+    }
 }
 
 -(void)shareAction:(id)sender {
@@ -105,6 +113,13 @@
         // #9
         [self.scrollView setZoomScale:self.scrollView.minimumZoomScale animated:YES];
     }
+}
+
+- (void) greyBackTapped:(UITapGestureRecognizer *)sender {
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void) viewWillLayoutSubviews {

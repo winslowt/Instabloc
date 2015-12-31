@@ -51,6 +51,9 @@
 		DA9147321C0BA77F00EF7DAF /* Comments.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147311C0BA77F00EF7DAF /* Comments.m */; };
 		DA9147351C0BA7EA00EF7DAF /* DataStores.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147341C0BA7EA00EF7DAF /* DataStores.m */; };
 		DA9147381C0BAA5500EF7DAF /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */; };
+		DA92171F1C34E44300569EAB /* MediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA92171E1C34E44300569EAB /* MediaTests.m */; };
+		DA9217211C34E65800569EAB /* ActualMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9217201C34E65800569EAB /* ActualMediaTests.m */; };
+		DA9217231C34E71700569EAB /* ComposeCommentViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9217221C34E71700569EAB /* ComposeCommentViewTests.m */; };
 		DAB406C61C1E260D00ACC5D2 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */; };
 		DAC0059C1C25B05C0004EBF2 /* angle-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005931C25B05C0004EBF2 /* angle-mask.png */; };
 		DAC0059D1C25B05C0004EBF2 /* angle-mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC005941C25B05C0004EBF2 /* angle-mask@2x.png */; };
@@ -143,6 +146,9 @@
 		DA9147341C0BA7EA00EF7DAF /* DataStores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStores.m; sourceTree = "<group>"; };
 		DA9147361C0BAA5500EF7DAF /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		DA9147371C0BAA5500EF7DAF /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
+		DA92171E1C34E44300569EAB /* MediaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaTests.m; path = InstablocTests/MediaTests.m; sourceTree = "<group>"; };
+		DA9217201C34E65800569EAB /* ActualMediaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActualMediaTests.m; sourceTree = "<group>"; };
+		DA9217221C34E71700569EAB /* ComposeCommentViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentViewTests.m; sourceTree = "<group>"; };
 		DAB406C41C1E260D00ACC5D2 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
 		DAB406C51C1E260D00ACC5D2 /* MediaFullScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenViewController.m; sourceTree = "<group>"; };
 		DAC005931C25B05C0004EBF2 /* angle-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle-mask.png"; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 		DA9146E01C0BA39600EF7DAF = {
 			isa = PBXGroup;
 			children = (
+				DA92171E1C34E44300569EAB /* MediaTests.m */,
 				DA9147271C0BA51100EF7DAF /* ImagesTableViewController.h */,
 				DA9147281C0BA51100EF7DAF /* ImagesTableViewController.m */,
 				DA91472A1C0BA69400EF7DAF /* User.h */,
@@ -300,6 +307,8 @@
 		DA9147051C0BA39600EF7DAF /* InstablocTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA9217221C34E71700569EAB /* ComposeCommentViewTests.m */,
+				DA9217201C34E65800569EAB /* ActualMediaTests.m */,
 				DA9147081C0BA39600EF7DAF /* InstablocTests.m */,
 				DA9147061C0BA39600EF7DAF /* Supporting Files */,
 			);
@@ -541,7 +550,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA92171F1C34E44300569EAB /* MediaTests.m in Sources */,
 				DA9147091C0BA39600EF7DAF /* InstablocTests.m in Sources */,
+				DA9217211C34E65800569EAB /* ActualMediaTests.m in Sources */,
+				DA9217231C34E71700569EAB /* ComposeCommentViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
